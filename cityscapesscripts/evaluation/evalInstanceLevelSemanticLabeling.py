@@ -699,7 +699,8 @@ def main():
             printError("Cannot find any ground truth images to use for evaluation. Searched for: {}".format(args.groundTruthSearch))
         # get the corresponding prediction for each ground truth imag
         for gt in groundTruthImgList:
-            predictionImgList.append( getPrediction(gt,args) )
+            print('gt in evalInstanceLevelSemanticLabeling.py', gt)
+            predictionImgList.append( getPrediction(gt,args))
 
     # print some info for user
     print("Note that this tool uses the file '{}' to cache the ground truth instances.".format(args.gtInstancesFile))
